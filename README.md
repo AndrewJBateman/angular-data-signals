@@ -1,27 +1,80 @@
-# AngularDataCloud
+# :zap: Angular Data Cloud
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.4.
+* Angular app to display data stored in the cloud.
+* **Note:** to open web links in a new window use: _ctrl+click on link_
 
-## Development server
+![GitHub repo size](https://img.shields.io/github/repo-size/AndrewJBateman/angular-data-cloud?style=plastic)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/AndrewJBateman/angular-data-cloud?style=plastic)
+![GitHub Repo stars](https://img.shields.io/github/stars/AndrewJBateman/angular-data-cloud?style=plastic)
+![GitHub last commit](https://img.shields.io/github/last-commit/AndrewJBateman/angular-data-cloud?style=plastic)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## :page_facing_up: Table of contents
 
-## Code scaffolding
+* [:zap: Angular Tailwind Converter](#zap-angular-tailwind-converter)
+  * [:page_facing_up: Table of contents](#page_facing_up-table-of-contents)
+  * [:books: General info](#books-general-info)
+  * [:camera: Screenshots](#camera-screenshots)
+  * [:signal_strength: Technologies](#signal_strength-technologies)
+  * [:floppy_disk: Setup](#floppy_disk-setup)
+  * [:wrench: Testing](#wrench-testing)
+  * [:computer: Code Examples](#computer-code-examples)
+  * [:cool: Features - Frontend](#cool-features---frontend)
+  * [:clipboard: Status, Testing & To-Do List](#clipboard-status-testing--to-do-list)
+  * [:clap: Inspiration/General Tools](#clap-inspirationgeneral-tools)
+  * [:file_folder: License](#file_folder-license)
+  * [:envelope: Contact](#envelope-contact)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## :books: General info
 
-## Build
+* tba
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## :camera: Screenshots
 
-## Running unit tests
+![Frontend screenshot](./imgs/data.png)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## :signal_strength: Technologies
 
-## Running end-to-end tests
+* [Angular framework v15](https://angular.io/)
+* [SCSS/SASS](https://sass-lang.com/) CSS extension language
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## :floppy_disk: Setup
 
-## Further help
+* Install dependencies using `npm i`
+* Run `ng serve` for a non-SSR dev server. Frontend will open at `http://localhost:4200/` - refreshes on code changes
+* Run `npm run lint` to lint test entire codebase using ESLint.
+* Run `npm run build` to generate a build file without SSR
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## :wrench: Testing
+
+* Run `ng test` to run Jasmine unit tests via [Karma](https://karma-runner.github.io)
+
+## :computer: Code Examples
+
+* `tba` tba
+
+```typescript
+tba
+```
+
+## :cool: Features
+
+* tba
+
+## :clipboard: Status, Testing & To-Do List
+
+* Status: In work
+* Testing: n/a
+* To-Do: tba
+
+## :clap: Inspiration/General Tools
+
+* [Install Tailwind CSS with Angular](https://tailwindcss.com/docs/guides/angular)
+
+## :file_folder: License
+
+* This project is licensed under the terms of the MIT license.
+
+## :envelope: Contact
+
+* Repo created by [ABateman](https://github.com/AndrewJBateman), email: gomezbateman@gmail.com
+
