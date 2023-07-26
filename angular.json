@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular-data-cloud": {
+    "angular-data-signals": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/angular-data-cloud",
+            "outputPath": "dist/angular-data-signals",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -65,10 +65,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "angular-data-cloud:build:production"
+              "browserTarget": "angular-data-signals:build:production"
             },
             "development": {
-              "browserTarget": "angular-data-cloud:build:development"
+              "browserTarget": "angular-data-signals:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -76,7 +76,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular-data-cloud:build"
+            "browserTarget": "angular-data-signals:build"
           }
         },
         "test": {
