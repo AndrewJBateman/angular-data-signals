@@ -1,1 +1,46 @@
-<p>country-detail works!</p>
+<section class="container mx-auto p-10 md:p-20 transform duration-500">
+  <img
+    class="w-full h-auto"
+    [src]="country()?.flags?.svg"
+    alt="flag for {{ country.name }}"
+  />
+  <div class="p-4 my-auto pb-10">
+    <h1 class="text-2xl font-semibold text-gray-800">
+      {{ country()?.name?.common }}
+    </h1>
+    <div class="flex pb-6 flex-wrap gap-8 font-extralight">
+      <div class="space-y-2">
+        <p>
+          <span class="font-bold">Official Name: </span
+          >{{ country()?.name?.official }}
+        </p>
+        <p>
+          <span class="font-bold">Population: </span>{{ country()?.population }}
+        </p>
+        <p><span class="font-bold">Region: </span>{{ country()?.region }}</p>
+        <p>
+          <span class="font-bold">Sub Region: </span>{{ country()?.subregion }}
+        </p>
+        <p>
+          <span class="font-bold">Capital:</span>
+          {{ country()?.capital?.[0] }}
+        </p>
+        <p>
+          <span class="font-bold">Top Level Domain:</span>
+          {{ country()?.tld }}
+        </p>
+      </div>
+      <div class="space-y-2">
+        <p class="font-bold">Currencies:</p>
+        <p *ngFor="let item of country()?.currencies | keyvalue">
+          {{ item.value.name }}
+        </p>
+        <p class="font-bold">Languages:</p>
+        <p *ngFor="let item of country()?.languages | keyvalue">
+          {{ item.value }}
+        </p>
+      </div>
+    </div>
+    <button class="btn md:ml-16 ml-4 px-2 font-mono text-lg text-teal-800 bg-teal-100 rounded-full animate-pulse" routerLink="/">Back</button>
+  </div>
+</section>

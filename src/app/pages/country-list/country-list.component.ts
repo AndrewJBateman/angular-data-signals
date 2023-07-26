@@ -4,14 +4,16 @@ import { CountriesService } from 'src/app/services/country-data.service';
 import { CountryCardComponent } from './country-card/country-card.component';
 import { RouterModule } from '@angular/router';
 import { CountryDetailInterface } from 'src/app/interfaces/countries.interface';
+import { SpinnerComponent } from 'src/app/common/spinner/spinner.component';
 
 @Component({
   selector: 'app-country-list',
   standalone: true,
-  imports: [CommonModule, CountryCardComponent, RouterModule],
+  imports: [CommonModule, CountryCardComponent, RouterModule, SpinnerComponent],
   templateUrl: './country-list.component.html',
 })
 export default class CountryListComponent {
+  loading = false;
   countryListService = inject(CountriesService);
   countryListData = this.countryListService.countryListData;
   searchText = signal<string>('');
@@ -38,10 +40,8 @@ export default class CountryListComponent {
     );
   });
 
-  onSelectRegion = (event: Event): void => {
-    if (!(event.target instanceof HTMLInputElement)) return;
-    const regionChosen = event?.target?.value;
-    this.regionSelected.set(regionChosen);
+  onSelectRegion = (region: any) => {
+    this.regionSelected.set(region?.target.value);
   };
 
   onSearch = (text: string) => {
