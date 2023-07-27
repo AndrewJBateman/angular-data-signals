@@ -40,8 +40,13 @@ export default class CountryListComponent {
     );
   });
 
-  onSelectRegion = (region: any) => {
-    this.regionSelected.set(region?.target.value);
+  onSelectRegion = (
+    region: Event & {
+      target: HTMLButtonElement;
+    }
+  ) => {
+    const { target } = region;
+    this.regionSelected.set(target.value);
   };
 
   onSearch = (text: string) => {
