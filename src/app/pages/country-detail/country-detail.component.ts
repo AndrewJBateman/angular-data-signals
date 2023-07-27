@@ -12,11 +12,6 @@ import { RouterModule } from '@angular/router';
 export default class CountryDetailComponent implements OnInit {
   countryListService = inject(CountriesService);
   country = this.countryListService.selectedCountry;
-
-  initialValue = () => {
-    console.log('country: ', this.country);
-  }
-
   @Input() id = '';
   ngOnInit(): void {
     this.countryListService.selectedCountryCode.set(this.id);

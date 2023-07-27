@@ -1,32 +1,27 @@
-<div *ngIf="loading; else cards">
-  <app-spinner></app-spinner>
-</div>
+<body class="container mx-auto mt-2">
+  <input
+    #searchCountryInput
+    type="text"
+    placeholder="Enter country name..."
+    class="input input-bordered max-w-xs m-2 px-12 bg-gray-100 border-gray-400 rounded-lg cursor-pointer hover:shadow-md hover:border-opacity-0 hover:-translate-y-1"
+    (input)="onSearch(searchCountryInput.value)"
+  />
 
-<ng-template #cards>
-  <body class="container mx-auto mt-2">
-    <input
-      #searchCountryInput
-      type="text"
-      placeholder="Enter country name..."
-      class="input input-bordered max-w-xs m-2 px-12 bg-gray-100 border-gray-400 rounded-lg cursor-pointer hover:shadow-md hover:border-opacity-0 hover:-translate-y-1"
-      (input)="onSearch(searchCountryInput.value)"
-    />
-
-    <select
-      id="regionSelector"
-      class="select select-bordered max-w-xs md:ml-0 ml-4 my-2 bg-gray-100 border-gray-400 rounded-lg cursor-pointer hover:shadow-md hover:border-opacity-0 hover:-translate-y-1"
-      (input)="onSelectRegion($event)"
+  <select
+    id="regionSelector"
+    class="select select-bordered max-w-xs md:ml-0 ml-4 my-2 bg-gray-100 border-gray-400 rounded-lg cursor-pointer hover:shadow-md hover:border-opacity-0 hover:-translate-y-1"
+    (input)="onSelectRegion($any($event))"
+  >
+    <option *ngFor="let region of regions" [value]="region">
+      {{ region }}
+    </option>
+  </select>
+  <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+    <app-country-card
+      *ngFor="let country of countriesFiltered()"
+      [country]="country"
+      [routerLink]="['/countries', country.cca2]"
     >
-      <option *ngFor="let region of regions" [value]="region">
-        {{ region }}
-      </option>
-    </select>
-    <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-      <app-country-card
-        *ngFor="let country of countriesFiltered()"
-        [country]="country"
-        [routerLink]="['/countries', country.cca2]"
-      >
-      </app-country-card>
-    </div></body
-></ng-template>
+    </app-country-card>
+  </div>
+</body>

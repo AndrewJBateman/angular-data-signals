@@ -6,7 +6,7 @@ import { RouterOutlet } from '@angular/router';
   selector: 'app-root',
   standalone: true,
   imports: [CommonModule, RouterOutlet],
-  templateUrl: './app.component.html'
+  template: `<router-outlet></router-outlet>`,
 })
 export class AppComponent {
   title = 'angular-data-signals';

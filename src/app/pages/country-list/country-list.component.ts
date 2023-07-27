@@ -4,16 +4,14 @@ import { CountriesService } from 'src/app/services/country-data.service';
 import { CountryCardComponent } from './country-card/country-card.component';
 import { RouterModule } from '@angular/router';
 import { CountryDetailInterface } from 'src/app/interfaces/countries.interface';
-import { SpinnerComponent } from 'src/app/common/spinner/spinner.component';
 
 @Component({
   selector: 'app-country-list',
   standalone: true,
-  imports: [CommonModule, CountryCardComponent, RouterModule, SpinnerComponent],
+  imports: [CommonModule, CountryCardComponent, RouterModule],
   templateUrl: './country-list.component.html',
 })
 export default class CountryListComponent {
-  loading = false;
   countryListService = inject(CountriesService);
   countryListData = this.countryListService.countryListData;
   searchText = signal<string>('');
