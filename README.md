@@ -46,6 +46,8 @@
 
 * Install dependencies using `npm i`
 * Run `ng serve` for a dev server. Frontend will open at `http://localhost:4200/` - refreshes on code changes
+* Run `npm run lint` to check files for correct typescript syntax. Currently no errors
+* Run `npm run lint:fix` to check ts and correct where possible (currently no errors to fix)
 * Run `npm run build` to generate a build file
 
 ## :wrench: Testing
@@ -74,7 +76,7 @@ countriesFiltered = computed(() => {
 ## :cool: Features
 
 * Angular signals used for more efficient change detection
-* Standalone components used to reduce boiler plate and do away with modules
+* Standalone components used to reduce boiler plate by doing away with modules
 * Tailwind styling means small styles build bundle size (2.15 kb transfer size when I generated build), depending on compression, browser parsing etc.
 
 ## :clipboard: Status, Testing & To-Do List
